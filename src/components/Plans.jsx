@@ -1,10 +1,12 @@
 import React from "react";
+import "./Plans.css"; // 👈 Importamos el CSS externo
 
 const plans = [
   {
     name: "Esencial",
-    price: "CLP $24.995 / mes",
+    price: "CLP $49.990",
     discount: "50% OFF",
+    subprice: "CLP $24.995 / mes",
     description: "Tu primer paso hacia un soporte confiable.",
     features: [
       "1 usuario / 1 equipo",
@@ -16,12 +18,13 @@ const plans = [
   },
   {
     name: "Avanza",
-    price: "CLP $49.995 / mes",
+    price: "CLP $99.990",
     discount: "50% OFF",
+    subprice: "CLP $49.985 / mes",
     description: "El impulso que tu negocio necesita para crecer seguro.",
     features: [
       "Hasta 3 usuarios / equipos",
-      "Soporte remoto esencial y avanzado",
+      "Soporte remoto esencial",
       "Continuidad operativa y mantenimiento",
       "Asesoría remota en configuración",
     ],
@@ -29,8 +32,9 @@ const plans = [
   },
   {
     name: "Premium",
-    price: "CLP $229.950 / mes",
+    price: "CLP $499.900",
     discount: "50% OFF",
+    subprice: "CLP $229.950 / mes",
     description: "Soporte integral con presencia en terreno cuando lo requieras.",
     features: [
       "Soporte remoto ilimitado",
@@ -43,71 +47,50 @@ const plans = [
   {
     name: "Infinity",
     price: "Cotización / según alcance",
-    discount: "",
+    discount: "50% OFF",
     description: "Un plan sin límites, 100% a medida.",
     features: [
-      "Cobertura ajustada a la empresa",
+      "Cobertura ajustada al tamaño de la empresa",
       "Soporte remoto y presencial a convenir",
       "Técnico residente opcional",
-      "Servicios extra: licencias, monitoreo, web, TI",
+      "Servicios extra: licencias, monitoreo, ciberseguridad, web, consultoría TI",
     ],
     highlight: false,
   },
 ];
 
-export default function Planes() {
+export default function Plans() {
   return (
-    <section className="py-20 bg-gradient-to-b from-white to-blue-50">
-      <div className="text-center mb-12">
-        <h2 className="text-4xl font-bold text-sky-700 mb-3">Nuestros Planes de Suscripción</h2>
-        <p className="text-gray-600">
-          Descubre el plan que mejor se adapta a tu empresa. Diseñados para ofrecer soporte TI confiable y ciberseguridad de primer nivel.
+    <section className="plans-section">
+      <div className="plans-header">
+        <h2>Nuestros Planes de Suscripción</h2>
+        <p>
+          Escoge el plan que mejor se adapta a tu empresa. Soporte TI confiable, seguro y con respaldo profesional.
         </p>
       </div>
 
-      <div className="flex flex-wrap justify-center gap-8 px-6">
+      <div className="plans-container">
         {plans.map((plan) => (
-          <div
-            key={plan.name}
-            className={`relative w-full sm:w-80 bg-white border border-sky-200 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 ${
-              plan.highlight ? "bg-sky-50 border-sky-300 shadow-lg" : ""
-            }`}
-          >
-            {plan.discount && (
-              <div className="absolute top-4 right-4 bg-sky-600 text-white text-xs font-bold py-1 px-3 rounded-full">
-                {plan.discount}
-              </div>
-            )}
+          <div key={plan.name} className={`plan-card ${plan.highlight ? "highlight" : ""}`}>
+            {plan.discount && <span className="discount">{plan.discount}</span>}
 
-            {plan.highlight && (
-              <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-sky-500 text-white text-xs px-4 py-1 rounded-full shadow">
-                RECOMENDADO
-              </div>
-            )}
+            <h3>{plan.name}</h3>
+            <p className="description">“{plan.description}”</p>
 
-            <div className="p-6 text-center">
-              <h3 className="text-xl font-semibold text-sky-700 mb-2">{plan.name}</h3>
-              <p className="text-gray-500 italic mb-4">{plan.description}</p>
-              <p className="text-2xl font-bold text-gray-800 mb-4">{plan.price}</p>
-
-              <ul className="text-left text-gray-600 mb-6 space-y-2">
-                {plan.features.map((feature, index) => (
-                  <li key={index} className="flex items-center gap-2">
-                    <span className="text-sky-500">✔</span> {feature}
-                  </li>
-                ))}
-              </ul>
-
-              <button
-                className={`w-full py-2 rounded-lg font-medium transition ${
-                  plan.highlight
-                    ? "bg-sky-600 text-white hover:bg-sky-700"
-                    : "bg-sky-100 text-sky-700 hover:bg-sky-200"
-                }`}
-              >
-                {plan.name === "Infinity" ? "Contactar" : "Contratar"}
-              </button>
+            <div className="price-block">
+              <p className="price">{plan.price}</p>
+              {plan.subprice && <p className="subprice">{plan.subprice}</p>}
             </div>
+
+            <ul>
+              {plan.features.map((feature, i) => (
+                <li key={i}>✔ {feature}</li>
+              ))}
+            </ul>
+
+            <button className="plan-button">
+              {plan.name === "Infinity" ? "WhatsApp / Llamar" : plan.highlight ? "Empezar ahora" : "Contratar"}
+            </button>
           </div>
         ))}
       </div>

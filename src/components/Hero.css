@@ -1,10 +1,11 @@
+/* 🌠 HERO SECTION - Paleta RIDS */
 .hero-section {
   position: relative;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #0a0f1a;
+  background: linear-gradient(180deg, #09272C 0%, #1A3C47 100%);
   overflow: hidden;
 }
 
@@ -29,55 +30,45 @@
 
 .hero-panel:hover {
   flex: 2;
-  filter: brightness(1.2);
+  filter: brightness(1.15);
 }
 
 .hero-panel .overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.3), rgba(0, 15, 30, 0.9));
+  background: linear-gradient(180deg, rgba(9, 39, 44, 0.5), rgba(7, 57, 86, 0.9));
   transition: background 0.5s ease;
 }
 
 .hero-panel:hover .overlay {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.4);
 }
 
 .hero-panel h2 {
   position: relative;
   z-index: 2;
   font-size: 2.2rem;
-  color: #38bdf8;
+  color: #00AEEF;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: 700;
-  text-shadow: 0 0 15px rgba(56, 189, 248, 0.7);
+  text-shadow: 0 0 15px rgba(0, 174, 239, 0.6);
   transition: transform 0.5s ease, color 0.5s ease;
 }
 
 .hero-panel:hover h2 {
   transform: scale(1.15);
-  color: #fff;
+  color: #FFFFFF;
 }
 
-/* Animación de entrada */
+/* Animación */
 @keyframes fadeInHero {
-  from {
-    opacity: 0;
-    transform: scale(1.05);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
+  from { opacity: 0; transform: scale(1.05); }
+  to { opacity: 1; transform: scale(1); }
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-  .hero-container {
-    flex-direction: column;
-  }
-  .hero-panel {
-    height: 25vh;
-  }
+  .hero-container { flex-direction: column; }
+  .hero-panel { height: 25vh; }
 }

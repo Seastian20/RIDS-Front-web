@@ -1,69 +1,184 @@
+/* 🌌 --- CONTENEDOR GENERAL (FONDO CELESTE) --- */
 .sobre-nosotros-container {
   position: relative;
   overflow: hidden;
+  background: linear-gradient(180deg, #9fe7f0 0%, #2EB5D2 100%);
+  color: #0a2c35;
+  font-family: 'Poppins', sans-serif;
 }
 
+/* 🌈 --- HERO SECTION --- */
 .hero-section {
   background: url("../assets/fondo-rids.gif") center/cover no-repeat fixed;
   position: relative;
   z-index: 1;
-  min-height: 35vh; /* antes 55vh */
+  min-height: 40vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 50px 0; /* menos espacio vertical */
+  text-align: center;
+  padding: 60px 20px;
 }
-
-
-
 
 .hero-section::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(0,95,106,0.7), rgba(32,109,153,0.7));
+  background: linear-gradient(180deg, rgba(46, 181, 210, 0.85), rgba(26, 60, 71, 0.85));
   z-index: -1;
 }
 
-/* Título con efecto */
-.animate-title {
-  animation: titlePop 1.2s ease forwards;
-  letter-spacing: 1px;
+.hero-section h1 {
+  color: #ffffff;
+  text-shadow: 0 0 12px rgba(46, 181, 210, 0.9);
 }
 
-/* Ajuste general */
+.hero-section p {
+  color: #e6f8fc;
+}
+
+/* ✨ --- BLOQUES DE TEXTO PRINCIPALES --- */
 .compact-text {
-  max-width: 850px;
-  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(46, 181, 210, 0.3);
+  border-left: 4px solid #1A3C47;
+  border-radius: 10px;
+  padding: 2rem;
+  color: #0a2c35;
+  box-shadow: 0 5px 15px rgba(26, 60, 71, 0.15);
+  transition: all 0.4s ease;
 }
 
-/* --- Animaciones --- */
+.compact-text:hover {
+  transform: translateY(-5px);
+  background: #ffffff;
+  color: #1A3C47;
+  box-shadow: 0 8px 25px rgba(26, 60, 71, 0.3);
+  border-left: 6px solid #2EB5D2;
+}
+
+/* 🧩 --- TARJETAS DE MISIÓN / VISIÓN --- */
+.animated-card {
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 12px;
+  padding: 2rem;
+  border: 1px solid rgba(46, 181, 210, 0.25);
+  transition: all 0.4s ease;
+  color: #0a2c35;
+}
+
+.animated-card:hover {
+  transform: translateY(-6px);
+  background: #ffffff;
+  color: #1A3C47;
+  border-color: #2EB5D2;
+  box-shadow: 0 8px 25px rgba(46, 181, 210, 0.35);
+}
+
+.animated-card h2 {
+  color: #1A3C47;
+  font-weight: 700;
+}
+
+.animated-card:hover h2 {
+  color: #2EB5D2;
+}
+
+.animated-card p {
+  color: #1a3c47b0;
+}
+
+.animated-card:hover p {
+  color: #1A3C47;
+}
+
+/* 🌟 --- VALORES --- */
+.value-card {
+  background: rgba(255, 255, 255, 0.85);
+  color: #1A3C47;
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid rgba(46, 181, 210, 0.25);
+  transition: all 0.4s ease;
+  text-align: center;
+}
+
+.value-card:hover {
+  background: #ffffff;
+  color: #0a2c35;
+  border-color: #1A3C47;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(46, 181, 210, 0.25);
+}
+
+.value-icon {
+  width: 80px;
+  height: 80px;
+  background: rgba(46, 181, 210, 0.15);
+  color: #1A3C47;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin: 0 auto 1rem;
+  transition: all 0.3s ease;
+}
+
+.value-card:hover .value-icon {
+  background: rgba(7, 57, 86, 0.1);
+  color: #2EB5D2;
+}
+
+/* 🎬 --- BOTÓN CTA --- */
+#contacto button {
+  background: linear-gradient(90deg, #1A3C47, #2EB5D2);
+  color: white;
+  font-weight: 700;
+  padding: 0.9rem 2rem;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 10px rgba(46, 181, 210, 0.3);
+  border: none;
+}
+
+#contacto button:hover {
+  background: linear-gradient(90deg, #2EB5D2, #1A3C47);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(46, 181, 210, 0.4);
+}
+
+/* 🌟 --- ANIMACIONES --- */
 .fade-in {
   opacity: 0;
   transform: translateY(10px);
   animation: fadeIn 0.8s forwards;
 }
 
-.animated-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.animated-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 25px rgba(0, 95, 106, 0.15);
-  border-left: 4px solid #206D99;
-}
-
-/* Flotante */
-.floating-animation {
-  animation: float 3s ease-in-out infinite;
-}
-
-/* Keyframes */
 @keyframes fadeIn {
   to {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.floating-animation {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* ✨ --- TITULO EFECTO --- */
+.animate-title {
+  animation: titlePop 1s ease forwards;
 }
 
 @keyframes titlePop {
@@ -77,11 +192,23 @@
   }
 }
 
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0);
+/* 📱 --- RESPONSIVE --- */
+@media (max-width: 768px) {
+  .hero-section {
+    min-height: 35vh;
+    padding: 40px 20px;
   }
-  50% {
-    transform: translateY(-5px);
+
+  .animated-card,
+  .value-card {
+    padding: 1.2rem;
+  }
+
+  .compact-text {
+    padding: 1.5rem;
+  }
+
+  #contacto button {
+    width: 100%;
   }
 }

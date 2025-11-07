@@ -1,0 +1,139 @@
+/* === PLANS SECTION === */
+.plans-section {
+  background: linear-gradient(180deg, #09272C 0%, #073956 100%);
+  color: #E0F2F8;
+  padding: 6rem 1rem;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.plans-header h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #E0F2F8;
+  margin-bottom: 0.5rem;
+}
+
+.plans-header p {
+  color: #A7C8D4;
+  max-width: 600px;
+  margin: 0 auto 3rem auto;
+  font-size: 1rem;
+}
+
+/* === CARDS === */
+.plans-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.plan-card {
+  background: linear-gradient(180deg, #0D3A46 0%, #073956 100%);
+  border: 1px solid rgba(14, 165, 233, 0.2);
+  border-radius: 16px;
+  width: 300px;
+  padding: 2rem 1.5rem;
+  position: relative;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.plan-card:hover {
+  transform: translateY(-8px);
+  border-color: #0EA5E9;
+  box-shadow: 0 15px 35px rgba(14, 165, 233, 0.3);
+}
+
+/* === DISCOUNT BADGE === */
+.discount {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: #0EA5E9;
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  text-transform: uppercase;
+}
+
+/* === PLAN TEXT === */
+.plan-card h3 {
+  color: #38BDF8;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.plan-card .description {
+  font-style: italic;
+  color: #A7C8D4;
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+/* === PRICE === */
+.price-block {
+  margin-bottom: 1.5rem;
+}
+
+.price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #E0F2F8;
+}
+
+.subprice {
+  font-size: 0.9rem;
+  color: #38BDF8;
+}
+
+/* === FEATURES === */
+.plan-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+  text-align: left;
+  color: #A7C8D4;
+}
+
+.plan-card li {
+  margin-bottom: 0.6rem;
+  font-size: 0.95rem;
+}
+
+/* === BUTTONS === */
+.plan-button {
+  width: 100%;
+  background: #0EA5E9;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 0;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.plan-button:hover {
+  background: #38BDF8;
+}
+
+/* === HIGHLIGHTED PLAN === */
+.highlight {
+  background: linear-gradient(180deg, #0EA5E9 0%, #073956 100%);
+  border: 2px solid #38BDF8;
+  transform: scale(1.03);
+}
+
+.highlight .plan-button {
+  background: #fff;
+  color: #073956;
+}
+
+.highlight .plan-button:hover {
+  background: #D1E9F7;
+}
