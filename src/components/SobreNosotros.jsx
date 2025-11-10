@@ -45,14 +45,16 @@ export default function SobreNosotros() {
         <div className="sobrenos-card">
           <h2 className="sobrenos-card-title">🤝 Compromiso</h2>
           <p>
-            Creemos en relaciones sólidas y duraderas, basadas en la confianza, la ética y la transparencia.
+            Entregar servicios de calidad a un precio justo.
+            Mejorar la productividad de nuestros clientes.
+            Consolidar relaciones de largo plazo con nuestros clientes. Mejoramiento Continuo.
           </p>
         </div>
 
         <div className="sobrenos-card">
           <h2 className="sobrenos-card-title">⭐ Excelencia</h2>
           <p>
-            Nos esforzamos por ofrecer la más alta calidad en cada proyecto, superando las expectativas.
+            Nos esforzamos por ofrecer la más alta calidad en cada proyecto, superando las expectativas. 
           </p>
         </div>
       </div>
