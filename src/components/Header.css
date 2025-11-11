@@ -16,29 +16,27 @@
 }
 
 /* Logo */
-.logo {
-  font-size: 2rem;
-  font-weight: 800;
-  color: #E6EEF1;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  cursor: pointer;
-  transition: transform 0.3s ease, color 0.3s ease;
+.logo-container {
+  display: flex;
+  align-items: center;
 }
 
-.logo:hover {
+.logo-img {
+  transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
   transform: scale(1.05);
-  color: #FFFFFF;
 }
 
-/* Navegación */
+/* Navegación Desktop */
 .nav-links {
   display: flex;
   gap: 40px;
 }
 
 .nav-links a {
-  color: #E6EEF1;
+  color: #e6eef1;
   font-weight: 600;
   text-decoration: none;
   font-size: 1.1rem;
@@ -46,22 +44,107 @@
 }
 
 .nav-links a:hover {
-  color: #00AEEF;
+  color: #00aeef;
   transform: translateY(-2px);
 }
 
 /* Header al hacer scroll */
 .header.scrolled {
-  background: linear-gradient(180deg, #09272C 0%, #073956 100%);
+  background: linear-gradient(180deg, #09272c 0%, #073956 100%);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
 }
 
-/* Responsive */
-@media (max-width: 900px) {
-  .header { padding: 0 30px; }
-  .nav-links { gap: 24px; }
+/* 🍔 Botón Hamburguesa */
+.hamburger {
+  display: none;
+  font-size: 1.9rem;
+  color: #e6eef1;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
-@media (max-width: 600px) {
-  .header { justify-content: center; }
-  .nav-links { display: none; }
+
+.hamburger:hover {
+  transform: scale(1.1);
+}
+
+/* 📱 Menú móvil mejorado */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 75px;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 75px);
+  background: rgba(10, 33, 54, 0.75);
+  backdrop-filter: blur(15px) saturate(180%);
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 90px;
+  gap: 25px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-20px);
+  transition: all 0.5s ease;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.mobile-menu.open {
+  display: flex;
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+  animation: fadeInDown 0.5s ease forwards;
+}
+
+/* ✨ Animación suave de aparición */
+@keyframes fadeInDown {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* 🌈 Enlaces con brillo */
+.mobile-menu a {
+  color: #ffffff;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.mobile-menu a:hover {
+  background: rgba(0, 174, 239, 0.25);
+  color: #00aeef;
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 174, 239, 0.35);
+}
+
+/* 📱 RESPONSIVE */
+@media (max-width: 900px) {
+  .header {
+    padding: 0 30px;
+  }
+  .nav-links {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
 }

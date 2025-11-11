@@ -1,4 +1,5 @@
-import React from "react";
+import footerLogo from "../assets/Footer.png"; // <-- ruta relativa desde este archivo
+
 import {
   FaLinkedin,
   FaInstagram,
@@ -17,10 +18,9 @@ export default function Footer() {
           <h3 className="text-lg font-semibold mb-3">Nosotros</h3>
           <div className="flex items-center mb-2">
             <img
-              src="/logo-rids.png"
+              src={footerLogo}
               alt="RIDS"
-              className="w-6 h-6 mr-2"
-            />
+              className="w-10 h-10 mr-3 rounded-full shadow-md"            />
             <span className="font-semibold tracking-wide">R I D S</span>
           </div>
           <p className="text-sm leading-relaxed opacity-90">
@@ -54,13 +54,12 @@ export default function Footer() {
         <div>
           <h3 className="text-lg font-semibold mb-3">Trabaja con nosotros</h3>
           <p className="text-sm opacity-90 leading-relaxed">
-            Si deseas trabajar con nosotros, envíanos tus datos a través
-            de este{" "}
+            Si deseas trabajar con nosotros, envíanos tus datos a través de +56 9 8807 6593
+            {" "}
             <a
               href="#contacto"
               className="text-[#00AEEF] hover:underline"
             >
-              Formulario de Contacto
             </a>.
           </p>
 

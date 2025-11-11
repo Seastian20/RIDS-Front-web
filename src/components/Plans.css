@@ -62,7 +62,7 @@
 
 /* === PLAN TEXT === */
 .plan-card h3 {
-  color: #38BDF8;
+  color: #ffffff;
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
@@ -111,9 +111,9 @@
   background: #0EA5E9;
   color: #fff;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   padding: 0.7rem 0;
-  font-weight: 600;
+  font-weight: 900;
   cursor: pointer;
   transition: background 0.3s ease;
 }
@@ -124,14 +124,14 @@
 
 /* === HIGHLIGHTED PLAN === */
 .highlight {
-  background: linear-gradient(180deg, #0EA5E9 0%, #073956 100%);
+  background: linear-gradient(180deg, #01141d 0%, #073956 100%);
   border: 2px solid #38BDF8;
   transform: scale(1.03);
 }
 
 .highlight .plan-button {
-  background: #fff;
-  color: #073956;
+  background: #fafafa;
+  color: #011724;
 }
 
 .highlight .plan-button:hover {

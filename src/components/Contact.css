@@ -10,7 +10,7 @@ body {
   position: relative;
   padding: 100px 0;
   background: linear-gradient(180deg, #051e2c 0%, #0d262e 100%);
-  overflow: hidden;
+  overflow: visible;
 }
 
 .contact-container {
@@ -170,14 +170,65 @@ body {
   transform: translateX(4px);
 }
 
-/* 📱 Responsive */
+/* 🗺️ Mapa */
+.map-container {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 260px;
+  border: none;
+  border-radius: 12px;
+}
+
+/* 📱 Responsive — SOLO ajuste sin alterar diseño */
 @media (max-width: 980px) {
   .contact-container {
     grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 0 20px;
   }
 
   .contact-info {
     order: -1;
     margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-section {
+    padding: 70px 0;
+  }
+
+  .contact-form,
+  .contact-info {
+    padding: 26px 20px;
+    border-radius: 16px;
+  }
+
+  .contact-title {
+    font-size: 1.8rem;
+  }
+
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    font-size: 0.9rem;
+  }
+
+  .submit-btn {
+    font-size: 0.95rem;
+  }
+
+  .info-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .map-container iframe {
+    height: 220px;
   }
 }

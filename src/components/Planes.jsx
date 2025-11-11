@@ -18,6 +18,7 @@ export default function Planes() {
         "Respaldo local básico",
       ],
       boton: "Contratar",
+      link: "https://app.reveniu.com/checkout-custom-link/ZjPI1JBKALQhhmIycGKyj6UVlzUdIVNl",
     },
     {
       nombre: "Avanza",
@@ -34,6 +35,7 @@ export default function Planes() {
       ],
       boton: "Contratar",
       destacado: true,
+      link: "https://app.reveniu.com/checkout-custom-link/v5oX9p7FN2dsbLiABP6bEJClWBmid9oT",
     },
     {
       nombre: "Premium",
@@ -50,6 +52,7 @@ export default function Planes() {
         "Gestión de licencias corporativas",
       ],
       boton: "Empezar ahora",
+      link: "https://app.reveniu.com/checkout-custom-link/DoaO5SkMPRKxv2tocnp4EXndD8YYUpgd",
     },
     {
       nombre: "Infinity",
@@ -64,6 +67,7 @@ export default function Planes() {
         "Servicios extra: licencias, monitoreo, ciberseguridad, web, consultoría TI",
       ],
       boton: "WhatsApp / Llamar",
+      link: "https://api.whatsapp.com/send/?phone=56988076593&text=Hola+RIDS%2C+quiero+informaci%C3%B3n+del+Plan+Infinity&type=phone_number&app_absent=0",
     },
   ];
 
@@ -128,7 +132,7 @@ export default function Planes() {
 
   return (
     <section className="planes-section">
-      {/* 🟦 Encabezado limpio (sin el texto que se sobrepone al navbar) */}
+      {/* 🟦 Encabezado limpio */}
       <div className="planes-hero">
         <motion.h1
           initial={{ opacity: 0, y: -40 }}
@@ -176,7 +180,16 @@ export default function Planes() {
                 </li>
               ))}
             </ul>
-            <button className="plan-btn">{plan.boton}</button>
+
+            {/* 🔗 Botón con link */}
+            <a
+              href={plan.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="plan-btn"
+            >
+              {plan.boton}
+            </a>
           </motion.div>
         ))}
       </div>
