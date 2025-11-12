@@ -19,9 +19,9 @@ export default function Footer() {
           <div className="flex items-center mb-2">
             <img
               src={footerLogo}
-              alt="RIDS"
-              className="w-10 h-10 mr-3 rounded-full shadow-md"            />
-            <span className="font-semibold tracking-wide">R I D S</span>
+               alt="RIDS"
+               className="w-32 h-auto mr-3 object-contain"/>
+            <span className="font-semibold tracking-wide"></span>
           </div>
           <p className="text-sm leading-relaxed opacity-90">
             Somos una empresa que brinda servicios tecnológicos para

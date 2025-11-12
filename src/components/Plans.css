@@ -107,33 +107,44 @@
 
 /* === BUTTONS === */
 .plan-button {
-  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;                /* 🔹 Botón más ancho */
+  margin: 1.5rem auto 0;     /* 🔹 Espacio superior y centrado */
   background: #0EA5E9;
   color: #fff;
   border: none;
-  border-radius: 10px;
-  padding: 0.7rem 0;
-  font-weight: 900;
+  border-radius: 12px;
+  padding: 1rem 2rem;        /* 🔹 Más espacio interno */
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(14, 165, 233, 0.35);
+  text-decoration: none;     /* 🔹 Quita subrayado */
 }
 
 .plan-button:hover {
   background: #38BDF8;
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(56, 189, 248, 0.45);
 }
 
-/* === HIGHLIGHTED PLAN === */
-.highlight {
-  background: linear-gradient(180deg, #01141d 0%, #073956 100%);
-  border: 2px solid #38BDF8;
-  transform: scale(1.03);
-}
-
+/* === HIGHLIGHTED PLAN BUTTON === */
 .highlight .plan-button {
-  background: #fafafa;
+  background: #ffffff;
   color: #011724;
+  font-weight: 800;
+  width: 95%;                /* 🔹 Más ancho para destacar */
+  padding: 1.2rem 2rem;      /* 🔹 Más alto y amplio */
+  box-shadow: 0 5px 14px rgba(56, 189, 248, 0.4);
+  margin: 1.5rem auto 0;
 }
 
 .highlight .plan-button:hover {
   background: #D1E9F7;
+  transform: translateY(-4px);
 }
