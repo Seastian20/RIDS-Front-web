@@ -140,8 +140,9 @@
   font-weight: 800;
   width: 95%;                /* 🔹 Más ancho para destacar */
   padding: 1.2rem 2rem;      /* 🔹 Más alto y amplio */
-  box-shadow: 0 5px 14px rgba(56, 189, 248, 0.4);
+  box-shadow: 0 5px 14px rgba(35, 95, 121, 0.4);
   margin: 1.5rem auto 0;
+  
 }
 
 .highlight .plan-button:hover {
