@@ -44,7 +44,7 @@ export default function Contact() {
   return (
     <section className="contact-section" id="contacto">
       <div className="contact-container">
-        {/* 🧾 FORMULARIO PRINCIPAL */}
+        {/* FORMULARIO PRINCIPAL */}
         <form className="contact-form" onSubmit={handleSubmit}>
           <h2 className="contact-title">Contáctanos</h2>
 
@@ -116,27 +116,29 @@ export default function Contact() {
           </button>
 
           {success === true && (
-            <p className="success-msg">✅ ¡Mensaje enviado con éxito!</p>
+            <p className="success-msg">¡Mensaje enviado con éxito!</p>
           )}
           {success === false && (
-            <p className="error-msg">❌ Error al enviar el mensaje. Intenta nuevamente.</p>
+            <p className="error-msg">
+              Error al enviar el mensaje. Intenta nuevamente.
+            </p>
           )}
         </form>
 
-        {/* 📍 PANEL DE INFORMACIÓN */}
+        {/* PANEL DE INFORMACIÓN */}
         <div className="contact-info">
           <h3>Información de contacto</h3>
 
           <div className="info-item">
             <strong>Ubicación:</strong>
-            <span>📍 Santiago, Chile</span>
+            <span>La Concepción 65, Oficina 1003, Providencia, Santiago, Chile</span>
           </div>
 
           <div className="info-item">
             <strong>Teléfonos:</strong>
             <span>
-              📞 +56 9 7371 3869 <br />
-              📞 +56 9 8807 6593
+              <a href="tel:+56973713869">+56 9 7371 3869</a> <br />
+              <a href="tel:+56988076593">+56 9 8807 6593</a>
             </span>
           </div>
 
@@ -149,7 +151,7 @@ export default function Contact() {
             </span>
           </div>
 
-          {/* 🗺️ MAPA AJUSTADO */}
+          {/* MAPA */}
           <div className="info-item info-map">
             <strong>Mapa:</strong>
             <div className="map-container">

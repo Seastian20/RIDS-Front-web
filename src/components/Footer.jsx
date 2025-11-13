@@ -1,5 +1,4 @@
-import footerLogo from "../assets/LOGO_RIDS_blanco.png"; // <-- ruta relativa desde este archivo
-
+import footerLogo from "../assets/LOGO_RIDS_blanco.png";
 import {
   FaLinkedin,
   FaInstagram,
@@ -19,34 +18,72 @@ export default function Footer() {
           <div className="flex items-center mb-2">
             <img
               src={footerLogo}
-               alt="RIDS"
-               className="w-32 h-auto mr-3 object-contain"/>
-            <span className="font-semibold tracking-wide"></span>
+              alt="RIDS"
+              className="w-32 h-auto mr-3 object-contain"
+            />
           </div>
           <p className="text-sm leading-relaxed opacity-90">
-            Somos una empresa que brinda servicios tecnológicos para
-            pequeñas y medianas empresas.
+            Somos una empresa que brinda servicios tecnológicos para pequeñas y medianas empresas.
           </p>
         </div>
 
         {/* 📞 Columna 2: Contacto */}
         <div>
           <h3 className="text-lg font-semibold mb-3">Contacto</h3>
-          <p className="flex items-center gap-2 text-sm opacity-90">
-            <FaMapMarkerAlt /> La Concepción 65, oficina 1003 Providencia,
-            Región Metropolitana
+
+          <p className="flex items-start gap-2 text-sm opacity-90">
+            <FaMapMarkerAlt className="mt-1" />
+            La Concepción 65, oficina 1003, Providencia, Región Metropolitana
           </p>
-          <p className="flex items-center gap-2 text-sm opacity-90 mt-1">
-            <FaPhone /> +56 9 8807 6593
+
+          <p className="flex items-center gap-2 text-sm opacity-90 mt-2">
+            <FaPhone />
+            <a
+              href="tel:+56988076593"
+              className="hover:text-[#00AEEF] transition-colors"
+            >
+              +56 9 8807 6593
+            </a>
           </p>
+
           <p className="flex items-center gap-2 text-sm opacity-90 mt-1">
-            <FaEnvelope /> soporte@rids.cl
+            <FaPhone />
+            <a
+              href="tel:+56973713869"
+              className="hover:text-[#00AEEF] transition-colors"
+            >
+              +56 9 7371 3869
+            </a>
           </p>
-          <p className="flex items-center gap-2 text-sm opacity-90 mt-1">
-            <FaEnvelope /> carenas@rids.cl
+
+          <p className="flex items-center gap-2 text-sm opacity-90 mt-2">
+            <FaEnvelope />
+            <a
+              href="mailto:soporte@rids.cl"
+              className="hover:text-[#00AEEF] transition-colors"
+            >
+              soporte@rids.cl
+            </a>
           </p>
+
           <p className="flex items-center gap-2 text-sm opacity-90 mt-1">
-            <FaEnvelope /> informacion@rids.cl
+            <FaEnvelope />
+            <a
+              href="mailto:carenas@rids.cl"
+              className="hover:text-[#00AEEF] transition-colors"
+            >
+              carenas@rids.cl
+            </a>
+          </p>
+
+          <p className="flex items-center gap-2 text-sm opacity-90 mt-1">
+            <FaEnvelope />
+            <a
+              href="mailto:informacion@rids.cl"
+              className="hover:text-[#00AEEF] transition-colors"
+            >
+              informacion@rids.cl
+            </a>
           </p>
         </div>
 
@@ -54,8 +91,13 @@ export default function Footer() {
         <div>
           <h3 className="text-lg font-semibold mb-3">Trabaja con nosotros</h3>
           <p className="text-sm opacity-90 leading-relaxed">
-            Si deseas trabajar con nosotros, envíanos tus datos a través de +56 9 8807 6593
-            {" "}
+            Si deseas trabajar con nosotros, contáctanos al{" "}
+            <a
+              href="tel:+56988076593"
+              className="text-[#00AEEF] hover:underline"
+            >
+              +56 9 8807 6593
+            </a>{" "}{" "}
             <a
               href="#contacto"
               className="text-[#00AEEF] hover:underline"
@@ -98,7 +140,8 @@ export default function Footer() {
 
       {/* 📜 Texto inferior */}
       <div className="text-center text-sm opacity-80">
-        © {new Date().getFullYear()} <span className="font-semibold">RIDS</span> — Soluciones Integrales de Tecnología
+        © {new Date().getFullYear()}{" "}
+        <span className="font-semibold">RIDS</span> — Soluciones Integrales de Tecnología
       </div>
     </footer>
   );
